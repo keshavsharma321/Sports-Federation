@@ -312,7 +312,7 @@ export default function Home() {
               <div className="animate-on-scroll">
                 <h2 className="section-title">Get Involved</h2>
                 <p className="text-muted-foreground mb-6">
-                  There are many ways to be part of our sports community, whether you're an athlete, coach, volunteer,
+                  There are many ways to be part of our sports community, whether you&apos;re an athlete, coach, volunteer,
                   or supporter.
                 </p>
                 <div className="space-y-4 stagger-children">

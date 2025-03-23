@@ -12,7 +12,7 @@ export default function GetInvolvedPage() {
             </div>
             <h1 className="text-4xl font-bold mb-4">Coming Soon</h1>
             <p className="text-muted-foreground mb-8">
-              We're currently working on this page. Check back soon for more information about how you can get involved
+              We&apos;re currently working on this page. Check back soon for more information about how you can get involved
               with our federation.
             </p>
             <Link href="/">

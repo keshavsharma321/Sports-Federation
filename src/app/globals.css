@@ -1,7 +1,1 @@
 @import "tailwindcss";
-
-@layer utilities {
-  .bg-gradient-blue {
-    @apply bg-gradient-to-r from-blue-700 to-blue-900;
-  }
-}

@@ -62,8 +62,8 @@ export function Carousel({ images, autoPlayInterval = 5000 }: CarouselProps) {
       </div>
 
       <Button
-        variant="outline"
-        size="icon"
+        // variant="outline"
+        // size="icon"
         className="absolute left-4 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm hover:bg-background/90"
         onClick={prev}
       >
@@ -72,8 +72,8 @@ export function Carousel({ images, autoPlayInterval = 5000 }: CarouselProps) {
       </Button>
 
       <Button
-        variant="outline"
-        size="icon"
+        // variant="outline"
+        // size="icon"
         className="absolute right-4 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm hover:bg-background/90"
         onClick={next}
       >

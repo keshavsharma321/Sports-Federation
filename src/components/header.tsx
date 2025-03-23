@@ -4,7 +4,6 @@ import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Globe, Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -48,27 +47,30 @@ export function Header() {
           ))}
         </nav>
 
+        {/* Mobile Menu */}
         <div className="flex md:hidden">
-          <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="mr-2">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+          <Button  className="mr-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <Menu className="h-6 w-6" />
+            <span className="sr-only">Toggle menu</span>
+          </Button>
+        </div>
+
+        {/* Mobile Menu Overlay */}
+        {isMenuOpen && (
+          <div className="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm md:hidden">
+            <div className="fixed inset-y-0 right-0 w-full max-w-xs bg-background shadow-lg">
               <div className="flex flex-col h-full">
-                <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center justify-between p-4 border-b">
                   <Link href="/" className="flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
                     <Globe className="h-6 w-6 text-primary" />
                     <span className="font-bold text-xl">Sports Federation</span>
                   </Link>
-                  <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(false)}>
+                  <Button  onClick={() => setIsMenuOpen(false)}>
                     <X className="h-6 w-6" />
                     <span className="sr-only">Close menu</span>
                   </Button>
                 </div>
-                <nav className="flex flex-col gap-4">
+                <nav className="flex flex-col gap-4 p-4">
                   {routes.map((route) => (
                     <Link
                       key={route.href}
@@ -83,7 +85,7 @@ export function Header() {
                     </Link>
                   ))}
                 </nav>
-                <div className="mt-auto pt-6 border-t">
+                <div className="mt-auto p-4 border-t">
                   <div className="flex gap-4 justify-center">
                     <Link href="#" className="text-muted-foreground hover:text-primary">
                       <svg
@@ -141,9 +143,9 @@ export function Header() {
                   </div>
                 </div>
               </div>
-            </SheetContent>
-          </Sheet>
-        </div>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   )
