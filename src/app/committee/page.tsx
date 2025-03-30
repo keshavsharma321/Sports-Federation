@@ -9,7 +9,7 @@ export default function CommitteePage() {
   const committeeMembers = [
     {
       id: 1,
-      name: "Dr. Sarah Johnson",
+      name: "Dr. Sarah ",
       role: "President",
       image: "/placeholder.svg?height=400&width=400&text=SJ",
       bio: "Dr. Johnson is a former Olympic athlete with over 20 years of experience in sports administration. She has led the federation since 2018 and has been instrumental in expanding our international presence.",
