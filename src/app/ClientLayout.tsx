@@ -6,13 +6,15 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Globe, Menu, X } from "lucide-react"
+import Image from "next/image"
+import logo from "../../public/logo.png"
 import "./globals.css"
 
 const routes = [
   { href: "/organization", label: "The Organization" },
   { href: "/what-we-do", label: "What We Do" },
   { href: "/footprint", label: "Our Footprint" },
-  { href: "/partners", label: "Partners" },
+  { href: "/partners", label: "Image Gallery" },
   { href: "/committee", label: "Committee" },
   { href: "/get-involved", label: "Get Involved" },
   { href: "/resources", label: "Resources" },
@@ -67,14 +69,14 @@ export default function ClientLayout({
           }`}
         >
           <div className="container mx-auto flex h-16 items-center justify-between px-4">
-            <Link href="/" className="flex items-center gap-2 group">
+            <Link href="/" className="flex items-center gap-1 group">
               <div className="bg-primary/10 p-2 rounded-full transition-all duration-300 group-hover:bg-primary/20">
-                <Globe className="h-5 w-5 text-primary animate-pulse-slow" />
+                <Image src={logo} alt="PSCT" className="h-18 w-18 " />
               </div>
               <span className="font-bold text-xl hidden sm:inline-block group-hover:text-primary transition-colors">
-                Sports Federation
+                Parwah Sports Charitable Trust
               </span>
-              <span className="font-bold text-xl sm:hidden group-hover:text-primary transition-colors">SF</span>
+              <span className="font-bold text-xl sm:hidden group-hover:text-primary transition-colors">Parwah Sports</span>
             </Link>
 
             <nav className="hidden md:flex gap-6">
@@ -114,7 +116,7 @@ export default function ClientLayout({
                 <div className="flex items-center justify-between p-4 border-b">
                   <Link href="/" className="flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
                     <Globe className="h-6 w-6 text-primary" />
-                    <span className="font-bold text-xl">Sports Federation</span>
+                    <span className="font-bold text-xl">Parwah Sports</span>
                   </Link>
                   <button
                     onClick={() => setIsMenuOpen(false)}
@@ -208,88 +210,72 @@ export default function ClientLayout({
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="animate-on-scroll">
                 <Link href="/" className="flex items-center gap-2 mb-4 group">
-                  <Globe className="h-6 w-6 text-primary group-hover:animate-bounce-light" />
+                <Image src={logo} alt="PSCT" className="h-18 w-18 " />
                   <span className="font-bold text-xl group-hover:text-primary transition-colors">
-                    Sports Federation
+                    Parwah Sports Charitable Trust
                   </span>
                 </Link>
                 <p className="text-sm text-muted-foreground mb-4">
                   Promoting excellence in sports and fostering talent development since 1985.
                 </p>
                 <div className="flex gap-4">
-                  <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5 hover-scale"
-                    >
-                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                    </svg>
-                    <span className="sr-only">Facebook</span>
-                  </Link>
-                  <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5 hover-scale"
-                    >
-                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                    </svg>
-                    <span className="sr-only">Instagram</span>
-                  </Link>
-                  <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5 hover-scale"
-                    >
-                      <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-                    </svg>
-                    <span className="sr-only">Twitter</span>
-                  </Link>
-                  <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5 hover-scale"
-                    >
-                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                      <rect width="4" height="12" x="2" y="9" />
-                      <circle cx="4" cy="4" r="2" />
-                    </svg>
-                    <span className="sr-only">LinkedIn</span>
-                  </Link>
-                </div>
+  <Link href="https://www.facebook.com/share/18r2xWUuhF/" className="text-muted-foreground hover:text-primary transition-colors">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-5 w-5 hover-scale"
+    >
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+    <span className="sr-only">Facebook</span>
+  </Link>
+  
+  <Link href="https://www.instagram.com/parwahsports?igsh=dGI4N2s2OHBqOHVw" className="text-muted-foreground hover:text-primary transition-colors">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-5 w-5 hover-scale"
+    >
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+    <span className="sr-only">Instagram</span>
+  </Link>
+
+  <Link href="https://youtube.com/@parwahsports?si=wEYn4rUYIlsLPT_m" className="text-muted-foreground hover:text-primary transition-colors">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-5 w-5 hover-scale"
+    >
+      <path d="M22.54 6.42a2.79 2.79 0 0 0-1.96-1.96C18.36 4 12 4 12 4s-6.36 0-8.58.46A2.79 2.79 0 0 0 1.46 6.42 29.94 29.94 0 0 0 1 12a29.94 29.94 0 0 0 .46 5.58 2.79 2.79 0 0 0 1.96 1.96C5.64 20 12 20 12 20s6.36 0 8.58-.46a2.79 2.79 0 0 0 1.96-1.96A29.94 29.94 0 0 0 23 12a29.94 29.94 0 0 0-.46-5.58zM10 15V9l6 3z" />
+    </svg>
+    <span className="sr-only">YouTube</span>
+  </Link>
+</div>
+
               </div>
               <div className="animate-on-scroll">
                 <h3 className="font-medium text-lg mb-4">Quick Links</h3>

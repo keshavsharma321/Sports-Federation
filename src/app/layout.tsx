@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import ClientLayout from "./ClientLayout"
 
 export const metadata: Metadata = {
-  title: "Sports Federation",
+  title: "Parwah Sports Charitable Trust",
   description: "Promoting excellence in sports and fostering talent development",
     generator: 'v0.dev'
 }
