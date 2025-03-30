@@ -1,46 +1,16 @@
 "use client"
 
-import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { MapPin, Phone, Mail, Globe, Send, CheckCircle } from "lucide-react"
+import { MapPin, Phone, Mail, Globe,  } from "lucide-react"
 import Map from "../../../public/Pasted image.png"
 
 export default function ContactPage() {
-  const [formState, setFormState] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-  })
+ 
 
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { id, value } = e.target;
-    setFormState((prev) => ({ ...prev, [id]: value }));
-  };
-  
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-  
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormState({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: "",
-      });
-    }, 1500);
-  };
+ 
+ 
   
   return (
     <div className="flex flex-col min-h-screen">

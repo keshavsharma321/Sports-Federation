@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Mail, Linkedin, Twitter, ExternalLink } from "lucide-react"
+import { Mail, Linkedin, Twitter } from "lucide-react"
 
 export default function CommitteePage() {
   // Committee members data

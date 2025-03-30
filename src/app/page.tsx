@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect, useCallback } from "react"
-import Link from "next/link"
 import Image from "next/image"
 import C1 from "../../public/C1.jpeg"
 import C2 from  "../../public/C2.jpg"
@@ -12,7 +11,7 @@ import M3 from "../../public/M3.jpeg"
 import M4 from "../../public/M4.jpeg"
 
 
-import { ChevronRight, MapPin, Users, Globe } from "lucide-react"
+import { ChevronRight } from "lucide-react"
 
 export default function Home() {
   const members = [
