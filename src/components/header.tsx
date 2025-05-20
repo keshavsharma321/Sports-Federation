@@ -28,7 +28,7 @@ export function Header() {
           <div className="bg-primary/10 p-2 rounded-full">
             <Globe className="h-5 w-5 text-primary" />
           </div>
-          <span className="font-bold text-xl hidden sm:inline-block">Sports Federation</span>
+          <span className="font-bold text-xl hidden sm:inline-block">Parwah Sports Charitable Trust</span>
           <span className="font-bold text-xl sm:hidden">SF</span>
         </Link>
 
