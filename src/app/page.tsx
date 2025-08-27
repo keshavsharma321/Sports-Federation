@@ -9,16 +9,15 @@ import M1 from "../../public/M1.jpeg"
 import M2 from "../../public/M2.jpeg"
 import M3 from "../../public/M3.jpeg"
 import M4 from "../../public/M4.jpeg"
-
+import P5 from "../../public/P5.jpeg"
 
 import { ChevronRight } from "lucide-react"
 
 export default function Home() {
   const members = [
-    { id: 1, image: M1, name: "John Doe" },
-    { id: 2, image: M2, name: "Jane Smith" },
-    { id: 3, image: M3, name: "Alice Brown" },
-    { id: 4, image: M4, name: "Ritik Saini" },
+    { id: 2, image: M2, name: "Haider choudhary" },
+    { id: 1, image: M1, name: "Mustkin ansari " },
+    { id: 4, image: M4, name: "Ritik Singh" },
   ];
   const carouselImages = [
     {
@@ -31,6 +30,12 @@ export default function Home() {
       src: C2,
       alt: "Community sports event",
       title: "Community Impact",
+      description: "Creating positive change through sports",
+    },
+     {
+      src: P5,
+      alt: "Taekwondo Championship 2025",
+      title: "Sports Event",
       description: "Creating positive change through sports",
     },
     
@@ -230,52 +235,64 @@ At Parwah Sports, our mission is to support athletes in reaching their full pote
       </p>
     </div>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-children">
-      {[
-        {
-          title: "Training Materials",
-          description:
-            "Coaching guides, training plans, and technical resources for athletes and coaches.",
-          color: "from-blue-500 to-blue-700",
-          btnColor: "bg-blue-600 hover:bg-blue-700",
-        },
-        {
-          title: "Event Calendar",
-          description:
-            "Upcoming competitions, training camps, workshops, and community events.",
-          color: "from-green-500 to-green-700",
-          btnColor: "bg-green-600 hover:bg-green-700",
-        },
-        {
-          title: "Publications",
-          description:
-            "Research papers, annual reports, newsletters, and sports science publications.",
-          color: "from-purple-500 to-purple-700",
-          btnColor: "bg-purple-600 hover:bg-purple-700",
-        },
-      ].map((resource, index) => (
-        <div
-          key={index}
-          className={`relative p-6 rounded-xl shadow-lg bg-white/70 backdrop-blur-md border border-gray-200 transition-transform duration-300 hover:scale-105 hover:shadow-2xl`}
+  {[
+    {
+      title: "Training Materials",
+      description:
+        "Coaching guides, training plans, and technical resources for athletes and coaches.",
+      color: "from-blue-500 to-blue-700",
+      btnColor: "bg-blue-600 hover:bg-blue-700",
+    },
+    {
+      title: "Event Calendar",
+      description:
+        "Upcoming competitions, training camps, workshops, and community events.",
+      color: "from-green-500 to-green-700",
+      btnColor: "bg-green-600 hover:bg-green-700",
+    },
+    {
+      title: "Publications",
+      description:
+        "Inter-School Taekwondo Championship by Parwah Sports Charitable Trust",
+      color: "from-purple-500 to-purple-700",
+      btnColor: "bg-purple-600 hover:bg-purple-700",
+      link: "/sample.pdf", // 👈 add your actual PDF name here
+    },
+  ].map((resource, index) => (
+    <div
+      key={index}
+      className={`relative p-6 rounded-xl shadow-lg bg-white/70 backdrop-blur-md border border-gray-200 transition-transform duration-300 hover:scale-105 hover:shadow-2xl`}
+    >
+      <div
+        className={`absolute inset-0 rounded-xl bg-gradient-to-br ${resource.color} opacity-20`}
+      ></div>
+      <h3 className="relative text-xl font-extrabold mb-3 text-gray-900">
+        {resource.title}
+      </h3>
+      <p className="relative text-gray-700 mb-4">{resource.description}</p>
+
+      {resource.title === "Publications" ? (
+        <a
+          href={resource.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`relative ${resource.btnColor} text-white font-semibold py-2 px-4 rounded-md w-full text-center block transition-all duration-300`}
         >
-          <div
-            className={`absolute inset-0 rounded-xl bg-gradient-to-br ${resource.color} opacity-20`}
-          ></div>
-          <h3 className="relative text-xl font-extrabold mb-3 text-gray-900">
-            {resource.title}
-          </h3>
-          <p className="relative text-gray-700 mb-4">{resource.description}</p>
-          <button
-            className={`relative ${resource.btnColor} text-white font-semibold py-2 px-4 rounded-md w-full transition-all duration-300`}
-          >
-            {resource.title === "Training Materials"
-              ? "Access Library"
-              : resource.title === "Event Calendar"
-              ? "View Calendar"
-              : "Browse Publications"}
-          </button>
-        </div>
-      ))}
+          Browse Publications
+        </a>
+      ) : (
+        <button
+          className={`relative ${resource.btnColor} text-white font-semibold py-2 px-4 rounded-md w-full transition-all duration-300`}
+        >
+          {resource.title === "Training Materials"
+            ? "Access Library"
+            : "View Calendar"}
+        </button>
+      )}
     </div>
+  ))}
+</div>
+
   </div>
 </section>
 

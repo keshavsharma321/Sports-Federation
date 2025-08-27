@@ -7,6 +7,16 @@ import E3 from "../../../public/E3.jpeg"
 import E4 from "../../../public/E4.jpeg"
 import E5 from "../../../public/E5.jpeg"
 import E6 from "../../../public/E6.jpeg"
+import P1 from "../../../public/P1.jpeg"
+import P2 from "../../../public/P2.jpeg"
+import P3 from "../../../public/P3.jpeg"
+import P4 from "../../../public/P4.jpeg"
+import P5 from "../../../public/P5.jpeg"
+import P6 from "../../../public/P6.jpeg"
+import P7 from "../../../public/P7.jpeg"
+import P8 from "../../../public/P8.jpeg"
+import P9 from "../../../public/P9.jpeg"
+
 
 export default function PartnersPage() {
   // Sample partner data
@@ -70,6 +80,97 @@ export default function PartnersPage() {
     website: "#",
     featured: false,
   },
+  {
+  id: 7,
+  name: "Taekwondo Championship 2025",
+  category: "Sports League",
+  description:
+    "The Taekwondo Championship 2025 is organized by Parwah Sports Trust, bringing together athletes to showcase skill, discipline, and sportsmanship in one of the most dynamic martial arts competitions.",
+  logo: P1,
+  website: "#",
+  featured: false,
+},
+{
+  id: 8,
+  name: "Taekwondo Championship 2025",
+  category: "Sports League",
+  description:
+    "The Taekwondo Championship 2025 is organized by Parwah Sports Trust, bringing together athletes to showcase skill, discipline, and sportsmanship in one of the most dynamic martial arts competitions.",
+  logo: P2,
+  website: "#",
+  featured: false,
+},
+{
+  id: 9,
+  name: "Taekwondo Championship 2025",
+  category: "Sports League",
+  description:
+    "The Taekwondo Championship 2025 is organized by Parwah Sports Trust, bringing together athletes to showcase skill, discipline, and sportsmanship in one of the most dynamic martial arts competitions.",
+  logo: P3,
+  website: "#",
+  featured: false,
+},
+{
+  id: 10,
+  name: "Taekwondo Championship 2025",
+  category: "Sports League",
+  description:
+    "The Taekwondo Championship 2025 is organized by Parwah Sports Trust, bringing together athletes to showcase skill, discipline, and sportsmanship in one of the most dynamic martial arts competitions.",
+  logo: P4,
+  website: "#",
+  featured: false,
+},
+{
+  id: 11,
+  name: "Taekwondo Championship 2025",
+  category: "Sports League",
+  description:
+    "The Taekwondo Championship 2025 is organized by Parwah Sports Trust, bringing together athletes to showcase skill, discipline, and sportsmanship in one of the most dynamic martial arts competitions.",
+  logo: P5,
+  website: "#",
+  featured: false,
+},
+{
+  id: 12,
+  name: "Taekwondo Championship 2025",
+  category: "Sports League",
+  description:
+    "The Taekwondo Championship 2025 is organized by Parwah Sports Trust, bringing together athletes to showcase skill, discipline, and sportsmanship in one of the most dynamic martial arts competitions.",
+  logo: P6,
+  website: "#",
+  featured: false,
+},
+{
+  id: 13,
+  name: "Taekwondo Championship 2025",
+  category: "Sports League",
+  description:
+    "The Taekwondo Championship 2025 is organized by Parwah Sports Trust, bringing together athletes to showcase skill, discipline, and sportsmanship in one of the most dynamic martial arts competitions.",
+  logo: P7,
+  website: "#",
+  featured: false,
+},
+{
+  id: 14,
+  name: "Taekwondo Championship 2025",
+  category: "Sports League",
+  description:
+    "The Taekwondo Championship 2025 is organized by Parwah Sports Trust, bringing together athletes to showcase skill, discipline, and sportsmanship in one of the most dynamic martial arts competitions.",
+  logo: P8,
+  website: "#",
+  featured: false,
+},
+{
+  id: 15,
+  name: "Taekwondo Championship 2025",
+  category: "Sports League",
+  description:
+    "The Taekwondo Championship 2025 is organized by Parwah Sports Trust, bringing together athletes to showcase skill, discipline, and sportsmanship in one of the most dynamic martial arts competitions.",
+  logo: P9,
+  website: "#",
+  featured: false,
+},
+
 ]
 
 
