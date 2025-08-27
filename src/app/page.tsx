@@ -7,7 +7,6 @@ import C2 from  "../../public/C2.jpg"
 import QR from "../../public/QR.png"
 import M1 from "../../public/M1.jpeg"
 import M2 from "../../public/M2.jpeg"
-import M3 from "../../public/M3.jpeg"
 import M4 from "../../public/M4.jpeg"
 import P5 from "../../public/P5.jpeg"
 
